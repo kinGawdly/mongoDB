@@ -2,20 +2,11 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateVentaDto {
   @ApiProperty({
-    example: '655d9b9cf6c2b3ec387cbfb4',
-    description: 'ObjectId Del producto a vender',
+    example: '655e721b4aeb59aa2b78fbe7',
+    description: 'Id del Producto',
   })
   productoId: string;
 
-  @ApiProperty({
-    example: '10',
-    description: 'Unidades vendidas',
-  })
-  unidadesVendidas: number;
-
-  @ApiProperty({
-    example: '450000',
-    description: 'Total venta',
-  })
-  totalVenta: number;
+  @ApiProperty({ example: '10', description: 'Cantidad de productos vendidos' })
+  cantidad: number;
 }

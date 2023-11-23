@@ -11,7 +11,6 @@ import { VentaModule } from './venta/venta.module';
     ProductoModule,
     VentaModule,
   ],
-
   controllers: [],
   providers: [],
 })

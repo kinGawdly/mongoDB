@@ -1,0 +1,13 @@
+//Crear container en docker
+docker run -d --name tienda_electronica -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=poke -e MONGO_INITDB_ROOT_PASSWORD=12345 mongo:latest
+
+//En mongosh
+use tienda_electronica
+db.createUser(
+  {
+    user: "poke",
+    pwd: "12345",
+    roles: [{ role: "readWrite", db: "tienda_electronica"}]
+  }
+)
+db.getUsers()

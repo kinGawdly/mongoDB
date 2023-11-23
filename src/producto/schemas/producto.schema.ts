@@ -5,11 +5,11 @@ export class Producto {
   @Prop({ name: 'nombre' })
   nombre: string;
 
-  @Prop({ name: 'categorias' })
-  categorias: string;
+  @Prop({ name: 'categoria' })
+  categoria: string;
 
-  @Prop({ name: 'precioU' })
-  precioU: number;
+  @Prop({ name: 'precio' })
+  precio: number;
 }
 
 export const ProductoSchema = SchemaFactory.createForClass(Producto);

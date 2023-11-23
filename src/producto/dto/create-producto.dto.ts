@@ -5,8 +5,8 @@ export class CreateProductoDto {
   nombre: string;
 
   @ApiProperty({ example: 'telefonos', description: 'Nombre de la Categoria' })
-  categorias: string;
+  categoria: string;
 
   @ApiProperty({ example: '400000', description: 'Precio del Producto' })
-  precioU: number;
+  precio: number;
 }

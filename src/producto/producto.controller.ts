@@ -7,7 +7,7 @@ import { ProductoService } from './producto.service';
 export class ProductoController {
   constructor(private readonly productoService: ProductoService) {}
 
-  @Get('listaProductos')
+  @Get('/listaProductos')
   async findAll() {
     const resultado = await this.productoService.findAll();
     return resultado;

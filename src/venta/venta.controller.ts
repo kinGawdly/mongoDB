@@ -14,8 +14,14 @@ export class VentaController {
   }
 
   @Post('registrarVenta')
-  @ApiBody({ type: CreateVentaDto, description: 'Datos de la venta a crear' })
+  @ApiBody({ type: CreateVentaDto, description: 'Datos del Producto' })
   async create(@Body() createVentaDto: CreateVentaDto) {
     return await this.ventaService.create(createVentaDto);
+  }
+
+  @Get('reporteCategorias')
+  async reporteCategorias() {
+    const resultado = await this.ventaService.reporteCategorias();
+    return resultado;
   }
 }
